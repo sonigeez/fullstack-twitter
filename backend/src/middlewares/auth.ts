@@ -6,7 +6,7 @@ interface AuthRequest extends Request {
 }
 
 
-const authenticate = (req:AuthRequest, res:Response, next:NextFunction) => {
+export const authenticate = (req:AuthRequest, res:Response, next:NextFunction) => {
   // Get the token from the Authorization header
   const authHeader = req.headers.authorization;
   
@@ -30,4 +30,3 @@ const authenticate = (req:AuthRequest, res:Response, next:NextFunction) => {
   }
 };
 
-module.exports = authenticate;
