@@ -13,8 +13,12 @@ router.post('/unfollow',authenticate, (req, res) => {});
 router.get('/followings', authenticate,(req, res) => {});
 router.get('/followers',authenticate, (req, res) => {});
 router.get('/feed', authenticate,(req, res) => {});
-router.post('/like', authenticate,(req, res) => {});
-router.post('/:username',authenticate, (req, res) => {});
+router.post('/like', authenticate,(req, res) => {
+    console.log("sdvsd");
+});
+router.get('/:username',authenticate, (req, res) => {
+    console.log(req.params.username);
+});
 
 
 

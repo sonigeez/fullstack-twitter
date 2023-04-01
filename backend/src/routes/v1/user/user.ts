@@ -1,7 +1,11 @@
 import express  from "express";
+import { createTweet, getTweet, deleteTweet, allTweets } from "../../../controllers/tweet_controller";
 
 const router = express.Router();
 
-router.post('/tweet', (req, res) => {});
-router.get('/tweet/:id', (req, res) => {});
-router.get('/tweets', (req, res) => {});
+router.get('/', allTweets);
+router.post('/tweet', createTweet);
+router.get('/tweet/:id', getTweet);
+router.delete('/tweet/:id', deleteTweet);
+
+export default router;
