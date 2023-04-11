@@ -9,6 +9,7 @@ interface AuthRequest extends Request {
 export const authenticate = (req:AuthRequest, res:Response, next:NextFunction) => {
   // Get the token from the Authorization header
   const authHeader = req.headers.authorization;
+  console.log("sdvdsv");
   
   if (!authHeader) {
     return res.status(401).json({ error: 'Burh login toh kar' });
